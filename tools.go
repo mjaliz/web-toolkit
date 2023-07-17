@@ -241,7 +241,7 @@ func (t *Tools) ReadJSON(w http.ResponseWriter, r *http.Request, data interface{
 }
 
 // WriteJSON takes a response status code and arbitrary data and writes JSON to the client
-func (t *Tools) WriteJSON(w http.ResponseWriter, r *http.Request, status int, data interface{}, headers ...http.Header) error {
+func (t *Tools) WriteJSON(w http.ResponseWriter, status int, data interface{}, headers ...http.Header) error {
 	out, err := json.Marshal(data)
 	if err != nil {
 		return err
